@@ -1,12 +1,12 @@
-## Student Details
-
-- Name: YERRAMSETTI Naveen
-- Student ID: 2026AJ05698
-- Assignment: Machine Learning Assignment 2
-
 # Breast Tumor Classification: Five-Model Streamlit App
 
-An end-to-end binary classification project for the Machine Learning Assignment 2. It trains five required classifiers on the Breast Cancer Wisconsin Diagnostic dataset, saves complete preprocessing/model artifacts, and evaluates them through an interactive Streamlit interface without retraining.
+## Student details
+
+- **Name:** YERRAMSETTI Naveen
+- **Student ID:** 2026AJ05698
+- **Assignment:** Machine Learning Assignment 2
+
+An end-to-end binary classification project for Machine Learning Assignment 2. The project trains five required classifiers on the Breast Cancer Wisconsin Diagnostic dataset, saves the complete preprocessing and model artifacts, and evaluates the trained models through an interactive Streamlit application without retraining.
 
 > **Academic and safety note:** This project is an educational demonstration, not a medical device. Its predictions must not be used for diagnosis or treatment.
 
@@ -29,10 +29,8 @@ The original scikit-learn target uses 0 for malignant and 1 for benign. The trai
 
 ## 3. Repository and live application links
 
-- GitHub repository: `https://github.com/yerramsettinaveen119-cmd/breast-cancer-ml-classification`
-- Live Streamlit app: `https://2026aj05698-breast-cancer-classification.streamlit.app/`
-
-Replace both placeholders after publishing.
+- [GitHub Repository](https://github.com/yerramsettinaveen119-cmd/breast-cancer-ml-classification)
+- [Live Streamlit Application](https://2026aj05698-breast-cancer-classification.streamlit.app/)
 
 ## 4. Models used
 
@@ -84,7 +82,7 @@ breast_cancer_ml_assignment/
 │   ├── model_metadata.joblib
 │   └── model_metadata.json
 └── screenshots/
-    └── README.txt
+    └──bits_virtual_lab_execution.png
 ```
 
 ## 8. Local execution
