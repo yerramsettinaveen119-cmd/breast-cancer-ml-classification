@@ -1,3 +1,9 @@
+## Student Details
+
+- Name: YERRAMSETTI Naveen
+- Student ID: 2026AJ05698
+- Assignment: Machine Learning Assignment 2
+
 # Breast Tumor Classification: Five-Model Streamlit App
 
 An end-to-end binary classification project for the Machine Learning Assignment 2. It trains five required classifiers on the Breast Cancer Wisconsin Diagnostic dataset, saves complete preprocessing/model artifacts, and evaluates them through an interactive Streamlit interface without retraining.
@@ -42,13 +48,13 @@ Scaling is placed inside scikit-learn pipelines so it is fitted only on training
 
 The following values were generated from the included scripts and the bundled 20% held-out test set.
 
-| ML Model | Accuracy | AUC | Precision | Recall | F1 | MCC |
-|---|---:|---:|---:|---:|---:|---:|
-| Logistic Regression | 0.9649 | 0.9960 | 0.9750 | 0.9286 | 0.9512 | 0.9245 |
-| Decision Tree | 0.9035 | 0.9471 | 0.9429 | 0.7857 | 0.8571 | 0.7926 |
-| K-Nearest Neighbors | 0.9561 | 0.9835 | 0.9744 | 0.9048 | 0.9383 | 0.9058 |
-| Gaussian Naive Bayes | 0.9386 | 0.9934 | 1.0000 | 0.8333 | 0.9091 | 0.8715 |
-| Support Vector Machine | 0.9825 | 0.9947 | 1.0000 | 0.9524 | 0.9756 | 0.9626 |
+| ML Model               | Accuracy |    AUC | Precision | Recall |     F1 |    MCC |
+| ---------------------- | -------: | -----: | --------: | -----: | -----: | -----: |
+| Logistic Regression    |   0.9649 | 0.9960 |    0.9750 | 0.9286 | 0.9512 | 0.9245 |
+| Decision Tree          |   0.9035 | 0.9471 |    0.9429 | 0.7857 | 0.8571 | 0.7926 |
+| K-Nearest Neighbors    |   0.9561 | 0.9835 |    0.9744 | 0.9048 | 0.9383 | 0.9058 |
+| Gaussian Naive Bayes   |   0.9386 | 0.9934 |    1.0000 | 0.8333 | 0.9091 | 0.8715 |
+| Support Vector Machine |   0.9825 | 0.9947 |    1.0000 | 0.9524 | 0.9756 | 0.9626 |
 
 ## 6. Observations
 
