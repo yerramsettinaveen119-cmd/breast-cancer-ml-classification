@@ -46,13 +46,13 @@ Scaling is placed inside scikit-learn pipelines so it is fitted only on training
 
 The following values were generated from the included scripts and the bundled 20% held-out test set.
 
-| ML Model               | Accuracy |    AUC | Precision | Recall |     F1 |    MCC |
-| ---------------------- | -------: | -----: | --------: | -----: | -----: | -----: |
-| Logistic Regression    |   0.9649 | 0.9960 |    0.9750 | 0.9286 | 0.9512 | 0.9245 |
-| Decision Tree          |   0.9035 | 0.9471 |    0.9429 | 0.7857 | 0.8571 | 0.7926 |
-| K-Nearest Neighbors    |   0.9561 | 0.9835 |    0.9744 | 0.9048 | 0.9383 | 0.9058 |
-| Gaussian Naive Bayes   |   0.9386 | 0.9934 |    1.0000 | 0.8333 | 0.9091 | 0.8715 |
-| Support Vector Machine |   0.9825 | 0.9947 |    1.0000 | 0.9524 | 0.9756 | 0.9626 |
+| ML Model               | Accuracy |        AUC | Precision | Recall |     F1 |    MCC |
+| ---------------------- | -------: | ---------: | --------: | -----: | -----: | -----: |
+| Logistic Regression    |   0.9649 | **0.9960** |    0.9750 | 0.9286 | 0.9512 | 0.9245 |
+| Decision Tree          |   0.9035 |     0.9471 |    0.9429 | 0.7857 | 0.8571 | 0.7926 |
+| K-Nearest Neighbors    |   0.9561 |     0.9835 |    0.9744 | 0.9048 | 0.9383 | 0.9058 |
+| Gaussian Naive Bayes   |   0.9386 |     0.9934 |    1.0000 | 0.8333 | 0.9091 | 0.8715 |
+| Support Vector Machine |   0.9825 |     0.9947 |    1.0000 | 0.9524 | 0.9756 | 0.9626 |
 
 ## 6. Observations
 
@@ -61,7 +61,7 @@ The following values were generated from the included scripts and the bundled 20
 - **K-Nearest Neighbors:** Benefits substantially from standardization because it relies on distances. Distance weighting lets closer training samples contribute more strongly than farther neighbors.
 - **Gaussian Naive Bayes:** Trains quickly and offers a useful probabilistic baseline. Its conditional-independence assumption is imperfect because radius, perimeter, area, and related measurements are correlated.
 - **Support Vector Machine:** The RBF kernel can model nonlinear separation while scaling prevents large-valued features from dominating. Probability estimates are enabled for consistent AUC calculation.
-- **Overall winner for this fixed split:** **Support Vector Machine**, selected by the highest MCC with AUC as the secondary criterion. MCC is useful here because it incorporates all four confusion-matrix outcomes. The conclusion is specific to this split and configuration.
+- **Overall winner for this fixed split:** **Support Vector Machine**. It achieved the highest Accuracy, Recall, F1 Score, and MCC while maintaining perfect Precision. Logistic Regression achieved a slightly higher AUC, but Support Vector Machine provided the strongest overall classification balance. This conclusion applies to the fixed split and model configuration used in this project.
 
 ## 7. Project structure
 
@@ -89,13 +89,17 @@ breast_cancer_ml_assignment/
 
 Use Python 3.10 or newer.
 
-```bash
+````bash
+### Windows PowerShell
+
+```powershell
 python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python train_models.py
-streamlit run app.py
-```
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python .\train_models.py
+python -m streamlit run .\app.py
+````
 
 On Windows PowerShell, activate with:
 
@@ -138,9 +142,9 @@ Run training and the Streamlit app in the BITS Virtual Lab. Capture one genuine 
 
 ## 13. Reproducibility and integrity
 
-- Same split is used for all models.
-- `stratify=y` preserves class proportions.
+- The same stratified train-test split is used for all five models.
+- `stratify=y` preserves the class proportions.
 - Pipelines prevent preprocessing leakage.
-- AUC uses probability scores rather than hard class labels.
-- Models are persisted with `joblib` and loaded by the app.
-- Modify UI wording, comments, observations, and repository history to reflect your own understanding and execution before submission.
+- AUC is calculated using probability scores rather than hard class predictions.
+- Models are persisted with `joblib` and loaded by the Streamlit application.
+- The Streamlit application evaluates saved models without retraining them on uploaded data.
