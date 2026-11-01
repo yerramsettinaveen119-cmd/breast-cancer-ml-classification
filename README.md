@@ -23,8 +23,8 @@ The original scikit-learn target uses 0 for malignant and 1 for benign. The trai
 
 ## 3. Repository and live application links
 
-- GitHub repository: `https://github.com/YOUR_USERNAME/YOUR_REPOSITORY`
-- Live Streamlit app: `https://YOUR_APP_NAME.streamlit.app`
+- GitHub repository: `https://github.com/yerramsettinaveen119-cmd/breast-cancer-ml-classification`
+- Live Streamlit app: `https://2026aj05698-breast-cancer-classification.streamlit.app/`
 
 Replace both placeholders after publishing.
 
